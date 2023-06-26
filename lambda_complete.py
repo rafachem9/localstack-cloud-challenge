@@ -7,8 +7,8 @@ import traceback
 endpoint_url = f'http://172.17.0.1:4566'
 region = "us-east-1"
 s3_filename = 'client_data.json'
-bucket = 'my-bucket'
-table_name = 'employee'
+bucket = 'zurich-data-lake'
+table_name = 'client'
 
 
 def download_file_s3(bucket_s3, s3_filename, local_filename):
