@@ -18,7 +18,7 @@ provider "aws" {
 }
 data "archive_file" "lambda_zip" {
   type        = "zip"
-  source_file = "lambda_complete.py"
+  source_dir   = "python/"
   output_path = "function.zip"
 }
 
@@ -33,7 +33,7 @@ resource "aws_lambda_function" "lambda" {
  filename         = "function.zip"
  source_code_hash = "data.archive_file.zip.output_base64sha256"
  role    = "arn:aws:iam::123456789012:role/lambda-ex"
- handler = "lambda_complete.lambda_handler"
+ handler = "lamdacode.lambda_handler"
  runtime = "python3.7"
  timeout = 60
 }
@@ -42,8 +42,7 @@ resource "aws_s3_bucket_notification" "aws-lambda-trigger" {
   bucket = aws_s3_bucket.zurich-bucket.id
   lambda_function {
     lambda_function_arn = aws_lambda_function.lambda.arn
-    events              = ["s3:ObjectCreated:*",
-                           "s3:ObjectRemoved:*"]
+    events              = ["s3:ObjectCreated:*"]
 
   }
 }
