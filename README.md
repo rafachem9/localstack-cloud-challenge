@@ -1,16 +1,3 @@
-# NUWE-Zurich-Cloud-Hackathon
-This repository contains all the files needed to start the online phase of the NUWE x Zurich Cloud Challenge.
-https://nuwe.io/dev/competitions/zurich-cloud-hackathon/online-preselection-cloud-challenge
-
-# Localstack examples:
-https://github.com/localstack/localstack-terraform-samples/blob/master/s3-lambda-sqs-notification/main.tf
-
-Pendiente de leer:
-https://levelup.gitconnected.com/how-to-test-s3-with-terraform-using-localstack-585d2366fa13
-
-## Schema architecture:
-![Alt text](/tecnical-documentation/Zurich-cloud-challenge.png "Optional title")
-
 ## Local execution:
 ### Localstack
 - To test this project, it is necessary to activate the localstack server in order to emulate AWS services:

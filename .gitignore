@@ -50,3 +50,4 @@ venv.bak/
 /terraform.tfstate
 /terraform.tfstate.backup
 /python/test/
+/function.zip
